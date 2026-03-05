@@ -12,6 +12,10 @@ namespace WinFormsApp1
             var x = int.Parse(this.NumberX.Text);
             var y = int.Parse(this.NumberY.Text);
 
+            Properties.Settings.Default.NumberX = x;
+            Properties.Settings.Default.NumberY = y;
+            Properties.Settings.Default.Save();
+
             MessageBox.Show(Logic.Multiply(x, y).ToString());
         }
     }
