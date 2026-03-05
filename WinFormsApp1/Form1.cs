@@ -9,7 +9,10 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(this.NumberX.Text);
+            var x = int.Parse(this.NumberX.Text);
+            var y = int.Parse(this.NumberY.Text);
+
+            MessageBox.Show(Logic.Multiply(x, y).ToString());
         }
     }
     public class Logic
