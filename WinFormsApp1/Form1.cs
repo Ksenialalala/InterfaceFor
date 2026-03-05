@@ -9,7 +9,19 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Ура работает! (╯°□°）╯︵ ┻━┻");
+            MessageBox.Show(this.NumberX.Text);
+        }
+    }
+    public class Logic
+    {
+        public static int Multiply(int x, int y)
+        {
+            int result = 0;
+            for (int i = 0; i < y; i++)
+            {
+                result = result + x;
+            }
+            return result;
         }
     }
 }
