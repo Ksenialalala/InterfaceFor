@@ -25,7 +25,9 @@ namespace WinFormsApp1
             Properties.Settings.Default.NumberY = y;
             Properties.Settings.Default.Save();
 
-            MessageBox.Show(Logic.Multiply(x, y).ToString());
+            int result = Logic.Multiply(x, y);
+
+            MessageBox.Show(result.ToString());
         }
     }
     public class Logic
