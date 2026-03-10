@@ -9,8 +9,17 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var x = int.Parse(this.NumberX.Text);
-            var y = int.Parse(this.NumberY.Text);
+            int x, y;
+            try
+            {
+                x = int.Parse(this.NumberX.Text);
+                y = int.Parse(this.NumberY.Text);
+            }
+            catch (FormatException)
+            {
+                return;
+            }
+            
 
             Properties.Settings.Default.NumberX = x;
             Properties.Settings.Default.NumberY = y;
